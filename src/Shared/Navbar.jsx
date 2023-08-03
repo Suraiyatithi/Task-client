@@ -2,6 +2,7 @@
 import {  Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import logo from '../assets/task-svgrepo-com.svg';
+import '../Home/Allcss/Banner.css'
 
 
 
@@ -15,7 +16,7 @@ const Header = () => {
                 <Container>
                 <Nav className=''>
                             <img style={{width:"50px "}} src={logo} alt="" />
-                            <h3 style={{color:"brown"}}>Tastify</h3>
+                            <h3 className='title'>Manage Task</h3>
                         </Nav>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">

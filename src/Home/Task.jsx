@@ -85,11 +85,24 @@ const Task = ({ task }) => {
       body: JSON.stringify(formValues),
     })
       .then((res) => res.json())
-      .then((data) => {
+    //   .then((data) => {
+    //     if (data.modifiedCount > 0) {
+    //       Swal.fire('Updated!', 'Task information has been updated.', 'success');
+    //       // Close the modal and update the task with the new information
+    //       handleModal2(false); // Pass 'false' to close the modal
+    //       // Update the tasks state after update
+    //       const updatedTasks = tasks.map((task) =>
+    //         task._id === _id ? { ...task, ...formValues } : task
+    //       );
+    //       setTasks(updatedTasks);
+    //     } else {
+    //       Swal.fire('Error!', 'Failed to update task information.', 'error');
+    //     }
+    //   })
+    .then((data) => {
         if (data.modifiedCount > 0) {
           Swal.fire('Updated!', 'Task information has been updated.', 'success');
-          // Close the modal and update the task with the new information
-          handleModal2(false); // Pass 'false' to close the modal
+          handleModal2(false); 
           // Update the tasks state after update
           const updatedTasks = tasks.map((task) =>
             task._id === _id ? { ...task, ...formValues } : task
